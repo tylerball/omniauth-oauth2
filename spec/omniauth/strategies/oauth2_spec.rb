@@ -57,7 +57,7 @@ describe OmniAuth::Strategies::OAuth2 do # rubocop:disable Metrics/BlockLength
     it "includes random state in the authorize params" do
       instance = subject.new("abc", "def")
       expect(instance.authorize_params.keys).to eq(["state"])
-      expect(instance.session["omniauth.state"]).not_to be_empty
+      expect(instance.session["omniauth.states"]).not_to be_empty
     end
   end
 
